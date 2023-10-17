@@ -1,0 +1,44 @@
+kind: workload
+name: WORKLOAD_NAME
+description: broker-dashboard-api
+spec:
+  type: serverless
+  containers:
+    - name: action-example
+      cpu: 6000m
+      env:
+        - name: INFISICAL_TOKEN
+          value: >-
+            INFISICAL_TOKEN_VALUE
+      image: "//image/IMAGE_NAME_TAG"
+      inheritEnv: false
+      memory: 12288Mi
+      ports:
+        - number: 8881
+          protocol: http
+  defaultOptions:
+    autoscaling:
+      maxConcurrency: 1000
+      maxScale: 1
+      metric: concurrency
+      minScale: 1
+      scaleToZeroDelay: 300
+      target: 100
+    capacityAI: true
+    debug: false
+    suspend: false
+    timeoutSeconds: 40
+  firewallConfig:
+    external:
+      inboundAllowCIDR:
+        - 0.0.0.0/0
+      outboundAllowCIDR:
+        - 0.0.0.0/0
+      outboundAllowHostname: []
+      outboundAllowPort: []
+    internal:
+      inboundAllowType: same-gvc
+      inboundAllowWorkload: []
+  identityLink: /org/ledgestone/gvc/GVC_NAME/identity/IDENTITY_LINK
+  localOptions: []
+  supportDynamicTags: false

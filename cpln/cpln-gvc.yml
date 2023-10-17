@@ -1,0 +1,7 @@
+kind: gvc
+name: GVC_NAME
+description: Actions Example
+spec:
+  staticPlacement:
+    locationLinks:
+      - /org/ORG_NAME/location/aws-us-west-2
