@@ -6,10 +6,6 @@ spec:
   containers:
     - name: action-example
       cpu: 6000m
-      env:
-        - name: INFISICAL_TOKEN
-          value: >-
-            INFISICAL_TOKEN_VALUE
       image: "//image/IMAGE_NAME_TAG"
       inheritEnv: false
       memory: 12288Mi
@@ -39,6 +35,6 @@ spec:
     internal:
       inboundAllowType: same-gvc
       inboundAllowWorkload: []
-  identityLink: /org/ledgestone/gvc/GVC_NAME/identity/IDENTITY_LINK
+  identityLink: /org/ORG_NAME/gvc/GVC_NAME/identity/IDENTITY_LINK
   localOptions: []
   supportDynamicTags: false
