@@ -1,6 +1,6 @@
 kind: workload
 name: WORKLOAD_NAME
-description: broker-dashboard-api
+description: 
 spec:
   type: serverless
   containers:
