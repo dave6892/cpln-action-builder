@@ -35,6 +35,5 @@ spec:
     internal:
       inboundAllowType: same-gvc
       inboundAllowWorkload: []
-  identityLink: /org/ORG_NAME/gvc/GVC_NAME/identity/IDENTITY_LINK
   localOptions: []
   supportDynamicTags: false
