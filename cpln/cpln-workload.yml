@@ -1,6 +1,6 @@
 kind: workload
 name: WORKLOAD_NAME
-description: 
+description: example
 spec:
   type: serverless
   containers:
