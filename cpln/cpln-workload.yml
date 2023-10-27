@@ -10,7 +10,7 @@ spec:
       inheritEnv: false
       memory: 12288Mi
       ports:
-        - number: 8881
+        - number: 8888
           protocol: http
   defaultOptions:
     autoscaling:
